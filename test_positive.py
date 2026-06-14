@@ -1,6 +1,9 @@
+# Importing the libraries
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+#pytest function to test the title
 def test_title():
 
     driver = webdriver.Chrome()
@@ -10,17 +13,18 @@ def test_title():
 
     driver.quit()
 
-
+#pytest funtion to test the homepage url
 def test_homepage_url():
 
     driver = webdriver.Chrome()
     driver.get("https://www.saucedemo.com/")
 
+    #verifying the url
     assert driver.current_url == "https://www.saucedemo.com/"
 
     driver.quit()
 
-
+#pytest dashboard
 def test_dashboard_url():
 
     driver = webdriver.Chrome()
